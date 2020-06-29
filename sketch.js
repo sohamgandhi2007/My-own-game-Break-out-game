@@ -23,85 +23,85 @@ bg2Image=loadImage("images/bg2.jpg")
 }
 
 function setup() {
-  createCanvas(1200,650);
+  createCanvas(windowWidth,windowHeight);
   bg=createSprite(600,300,1200,600);
   bg.addImage(bgImage);
   bg.scale=4;
 //bg.addImage(bg2Image)
 
-  enemy1=createSprite(100,30,100,20)
+  enemy1=createSprite(width-1260,height-625,100,20)
   enemy1.shapeColor="red"
 
-  enemy2=createSprite(300,30,100,20)
+  enemy2=createSprite(width-1060,height-625,100,20)
   enemy2.shapeColor="red"
 
-  enemy3=createSprite(500,30,100,20)
+  enemy3=createSprite(width-860,height-625,100,20)
   enemy3.shapeColor="red"
 
-  enemy4=createSprite(700,30,100,20)
+  enemy4=createSprite(width-660,height-625,100,20)
   enemy4.shapeColor="red"
 
-  enemy5=createSprite(900,30,100,20)
+  enemy5=createSprite(width-460,height-625,100,20)
   enemy5.shapeColor="red"
 
-  enemy6=createSprite(1100,30,100,20)
+  enemy6=createSprite(width-260,height-625,100,20)
   enemy6.shapeColor="red"
 
-  enemy7=createSprite(100,90,100,20)
+  enemy7=createSprite(width-1260,height-565,100,20)
   enemy7.shapeColor="Green"
 
-  enemy8=createSprite(300,90,100,20)
+  enemy8=createSprite(width-1060,height-565,100,20)
   enemy8.shapeColor="Green"
 
-  enemy9=createSprite(500,90,100,20)
+  enemy9=createSprite(width-860,height-565,100,20)
   enemy9.shapeColor="Green"
 
-  enemy10=createSprite(700,90,100,20)
+  enemy10=createSprite(width-660,height-565,100,20)
   enemy10.shapeColor="Green"
 
-  enemy11=createSprite(900,90,100,20)
+  enemy11=createSprite(width-460,height-565,100,20)
   enemy11.shapeColor="Green"
 
-  enemy12=createSprite(1100,90,100,20)
+  enemy12=createSprite(width-260,height-565,100,20)
   enemy12.shapeColor="Green"
 
-  enemy13=createSprite(100,150,100,20)
+  enemy13=createSprite(width-1260,height-505,100,20)
   enemy13.shapeColor="yellow"
 
-  enemy14=createSprite(300,150,100,20)
+  enemy14=createSprite(width-1060,height-505,100,20)
   enemy14.shapeColor="yellow"
 
-  enemy15=createSprite(500,150,100,20)
+  enemy15=createSprite(width-860,height-505,100,20)
   enemy15.shapeColor="yellow"
 
-  enemy16=createSprite(700,150,100,20)
+  enemy16=createSprite(width-660,height-505,100,20)
   enemy16.shapeColor="yellow"
 
-  enemy17=createSprite(900,150,100,20)
+  enemy17=createSprite(width-460,height-505,100,20)
   enemy17.shapeColor="yellow"
 
-  enemy18=createSprite(1100,150,100,20)
+  enemy18=createSprite(width-260,height-505,100,20)
   enemy18.shapeColor="yellow"
 
-  enemy19=createSprite(100,210,100,20)
+  enemy19=createSprite(width-1260,height-445,100,20)
   enemy19.shapeColor="blue"
 
-  enemy19=createSprite(300,210,100,20)
+  enemy19=createSprite(width-1060,height-445,100,20)
   enemy19.shapeColor="blue"
 
-  enemy20=createSprite(300,210,100,20)
+  enemy20=createSprite(width-860,height-445,100,20)
   enemy20.shapeColor="blue"
 
-  enemy21=createSprite(500,210,100,20)
+  enemy21=createSprite(width-660,height-445,100,20)
   enemy21.shapeColor="blue"
 
-  enemy22=createSprite(700,210,100,20)
+  enemy22=createSprite(width-460,height-445,100,20)
   enemy22.shapeColor="blue"
 
-  enemy23=createSprite(900,210,100,20)
+  enemy23=createSprite(width-260,height-445,100,20)
   enemy23.shapeColor="blue"
 
-  enemy24=createSprite(1100,210,100,20)
+  enemy24=createSprite(1100,height-445,100,20)
   enemy24.shapeColor="blue"
 
 box1=createSprite(200,60,30,30)
@@ -149,10 +149,10 @@ box14.shapeColor="orange"
 box15=createSprite(1000,180,30,30)
 box15.shapeColor="orange"
 
-bar=createSprite(600,610,150,20)
+bar=createSprite(width-770,height-50,150,20)
 bar.shapeColor="black"
 
- ball=createSprite(600,580,30,30)
+ ball=createSprite(width-770,height-70,30,30)
 ball.addImage(ballImage)
 ball.scale=0.3
 ball.setCollider("circle",0,0,30)
@@ -160,7 +160,7 @@ ball.setCollider("circle",0,0,30)
 score=0
 timer=120
 
-lifeOne=createSprite(1100,600,20,20)
+lifeOne=createSprite(width-300,height-70,20,20)
 lifeOne.addImage(lifeOneImage)
 lifeOne.scale=0.3
 
@@ -364,12 +364,8 @@ ball.bounceOff(box13)
 ball.bounceOff(box14)
 ball.bounceOff(box15)
 
-  if(touches.length>0){
-     bar.velocityX=-10
-    
-       }
 
-  if(keyDown("left_Arrow")){
+if(keyDown("left_Arrow")){
   bar.velocityX=-10  
   bar.velocityY=0
   }
@@ -409,6 +405,7 @@ if(counter===0){
   textSize(50)
 text("Press Space to Start",450,300)
 }
+
 if(counter===24){
 textSize(50)
 fill("Black")
