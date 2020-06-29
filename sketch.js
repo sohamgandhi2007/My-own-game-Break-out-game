@@ -364,7 +364,12 @@ ball.bounceOff(box13)
 ball.bounceOff(box14)
 ball.bounceOff(box15)
 
-if(keyDown("left_Arrow")){
+  if(touches.length>0){
+     bar.velocityX=-10
+    
+       }
+
+  if(keyDown("left_Arrow")){
   bar.velocityX=-10  
   bar.velocityY=0
   }
